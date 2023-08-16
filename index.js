@@ -1,7 +1,3 @@
-// const flagElementWrapper = document.getElementById('flag-element-wrapper');
-// const width = flagElementWrapper.offsetWidth;
-// const height = flagElementWrapper.offsetHeight;
-
 const flagPoleElement = document.getElementById('flag-pole');
 const charactersElement = document.getElementById('characters');
 const chatBubbleElement = document.getElementById('chat-bubble');
@@ -9,13 +5,6 @@ const flagElement = document.getElementById('flag');
 const flagWaveElement = document.getElementById('flagwave');
 const buttonWrapper = document.getElementById('button-wrapper');
 const audio = document.getElementById('audio');
-
-// for(let i = 0; i < width; i += 1) {
-//   const element = document.createElement('div');
-//   element.classList.add('flag-element');
-//   element.style.animationDelay = `${i * 1}ms`;
-//   flagElementWrapper.appendChild(element);
-// }
 
 const handlePlayAudio = () => {
   audio.play();
