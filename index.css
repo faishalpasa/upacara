@@ -26,6 +26,7 @@ body {
 .pole {
   width: 8px;
   background: #b0b0b0;
+  border: 0.5px solid #000;
 }
 
 .pole::after {
@@ -37,6 +38,24 @@ body {
   z-index: 1;
   border-radius: 24px;
   transform: translate(-8px, -12px);
+  border: 0.5px solid #000;
+}
+
+.point {
+  position: absolute;
+  top: -116px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  font-size: 24px;
+}
+
+.click-point {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  font-size: 20px;
+  z-index: 1;
 }
 
 .flag-wrapper {
@@ -79,7 +98,36 @@ body {
 }
 
 .play-button:active {
-  opacity: 0.5;
+  opacity: 0.8;
+}
+
+.action-button-wrapper {
+  position: absolute;
+  bottom: -116px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50px, 0px);
+}
+
+.action-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: unset;
+  outline: unset;
+  padding: 16px;
+  font-size: 16px;
+  font-family: monospace;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button:active {
+  background-color: red;
 }
 
 .characters {
@@ -108,11 +156,33 @@ body {
   opacity: 0;
 }
 
-.typewriter {
-  color: #000;
-  font-family: monospace;
-  margin: 0 auto;
-  font-size: 16px;
+.overlay {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  max-width: 425px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.overlay-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.total-point-title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.total-point {
+  font-size: 40px;
+  margin: 0;
 }
 
 @keyframes wave {
