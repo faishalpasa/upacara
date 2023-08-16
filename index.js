@@ -12,7 +12,7 @@ const audio = document.getElementById('audio');
 for(let i = 0; i < width; i += 1) {
   const element = document.createElement('div');
   element.classList.add('flag-element');
-  element.style.animationDelay = `${i * 5}ms`;
+  element.style.animationDelay = `${i * 1}ms`;
   flagElementWrapper.appendChild(element);
 }
 
@@ -41,13 +41,11 @@ const handleClickStartButton = () => {
   buttonWrapper.style.bottom = '-10%';
   buttonWrapper.style.transition = `bottom 1s`;
 
-  flagPoleElement.style.left = '0%';
-  flagPoleElement.style.transition = `left 1s`;
+  flagPoleElement.style.right = '0%';
+  flagPoleElement.style.transition = `right 1s`;
 
-  charactersElement.style.right = '0%';
-  charactersElement.style.transition = `right 1s`;
-
-
+  charactersElement.style.left = '0%';
+  charactersElement.style.transition = `left 1s`;
 
   setTimeout(() => {
     chatBubbleElement.style.opacity = '1';

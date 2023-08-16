@@ -20,7 +20,7 @@ body {
   flex: 1;
   margin-top: 32px;
   position: relative;
-  left: -100%;
+  right: -100%;
 }
 
 .pole {
@@ -84,7 +84,7 @@ body {
   width: 100%;
   bottom: -50px;
   height: 400px;
-  right: -100%;
+  left: -100%;
 }
 
 .character-wrapper {
