@@ -6,6 +6,7 @@ const flagPoleElement = document.getElementById('flag-pole');
 const charactersElement = document.getElementById('characters');
 const chatBubbleElement = document.getElementById('chat-bubble');
 const flagElement = document.getElementById('flag');
+const flagWaveElement = document.getElementById('flagwave');
 const buttonWrapper = document.getElementById('button-wrapper');
 const audio = document.getElementById('audio');
 
@@ -21,11 +22,11 @@ const handlePlayAudio = () => {
 }
 
 const handlePlayCeremony = () => {
-  chatBubbleElement.style.opacity = '0';
-  charactersElement.style.transition = `opacity 0.5s`;
-
   handlePlayAudio()
   const audioDuration = Math.floor(audio.duration)
+
+  chatBubbleElement.style.opacity = '0';
+  charactersElement.style.transition = `opacity 0.5s`;
   
   let seconds = 0;
   const percent = 100 / audioDuration;
