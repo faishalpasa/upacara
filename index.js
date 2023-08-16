@@ -55,7 +55,7 @@ const handleCountDuration = () => {
 }
 
 const handleClickStartButton = () => {
-  buttonWrapperElement.style.bottom = '-10%';
+  buttonWrapperElement.style.bottom = '-100%';
   buttonWrapperElement.style.transition = `bottom 1s`;
 
   flagPoleElement.style.right = '0%';
