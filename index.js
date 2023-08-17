@@ -85,7 +85,7 @@ const handleClickActionButton = () => {
     totalPointWrapperElement.innerText = point;
     flagElement.style.bottom = `calc(${click}% - 200px)`;
     flagElement.style.transition = `bottom 0.5s`;
-  } else if (click == 100 && seconds < audioDuration) {
+  } else if (click == 100 && seconds < (audioDuration - 3)) { // 3 second thrshold
     clearInterval(durationInterval)
     actionButtonWrapperElement.style.bottom = '-116px';
     actionButtonWrapperElement.style.transition = `bottom 1s`;
