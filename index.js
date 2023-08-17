@@ -85,14 +85,16 @@ const handleClickActionButton = () => {
     totalPointWrapperElement.innerText = point;
     flagElement.style.bottom = `calc(${click}% - 200px)`;
     flagElement.style.transition = `bottom 0.5s`;
-  } else if (click == 100 && seconds < (audioDuration - 3)) { // 3 second thrshold
+  } else if (click == 100 && seconds < audioDuration) { 
     clearInterval(durationInterval)
     actionButtonWrapperElement.style.bottom = '-116px';
     actionButtonWrapperElement.style.transition = `bottom 1s`;
     pointWrapperElement.style.top = '-116px';
     pointWrapperElement.style.transition = `top 1s`;
     overlayElement.style.display = 'block';
-    totalPointDescElement.innerText = 'Lagu Indonesia Raya belum selesai, sepertinya kamu menarik bendera terlalu cepat.'
+    if (seconds < (audioDuration - 5)) {
+      totalPointDescElement.innerText = 'Lagu Indonesia Raya belum selesai, sepertinya kamu menarik bendera terlalu cepat.'
+    }
   }
 
   const clickPointElement = document.createElement('div');
