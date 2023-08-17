@@ -212,6 +212,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  padding: 0px 32px;
+  text-align: center;
 }
 
 .total-point-title {

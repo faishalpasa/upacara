@@ -7,6 +7,7 @@ const buttonWrapperElement = document.getElementById('button-wrapper');
 const actionButtonWrapperElement = document.getElementById('action-button-wrapper');
 const pointWrapperElement = document.getElementById('point');
 const totalPointWrapperElement = document.getElementById('total-point');
+const totalPointDescElement = document.getElementById('total-point-desc');
 const backgroundElement = document.getElementById('background');
 const overlayElement = document.getElementById('overlay');
 const audio = document.getElementById('audio');
@@ -84,6 +85,14 @@ const handleClickActionButton = () => {
     totalPointWrapperElement.innerText = point;
     flagElement.style.bottom = `calc(${click}% - 200px)`;
     flagElement.style.transition = `bottom 0.5s`;
+  } else if (click == 100 && seconds < audioDuration) {
+    clearInterval(durationInterval)
+    actionButtonWrapperElement.style.bottom = '-116px';
+    actionButtonWrapperElement.style.transition = `bottom 1s`;
+    pointWrapperElement.style.top = '-116px';
+    pointWrapperElement.style.transition = `top 1s`;
+    overlayElement.style.display = 'block';
+    totalPointDescElement.innerText = 'Lagu Indonesia Raya belum selesai, sepertinya kamu menarik bendera terlalu cepat.'
   }
 
   const clickPointElement = document.createElement('div');
